@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+}
+
+.menu-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 12px 111px;
+}
+
+/* Estilo del logo */
+.menu-container .logo img {
+    height: 59px;
+    border-radius: 10px;
+}
+
+/* Checkbox para el menú responsive */
+.menu-container input[type="checkbox"] {
+    display: none;
+}
+
+/* Icono del menú responsive */
+.menu-container label img.menu-responsib {
+    height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilos del menú */
+.contenido-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+.contenido-nav ul li {
+    position: relative;
+}
+
+.contenido-nav ul li a {
+    text-decoration: none;
+    color: #32609E;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contenido-nav a.active{
+    font-weight: bold; /* Mantiene el texto en negrita */
+    color: #32609E; /* Cambia el color del texto a rojo para resaltar */
+    text-decoration: underline; /* Añade un subrayado al enlace activo */
+    text-decoration-thickness: 3px; /* Grosor del subrayado */
+}
+
+.contenido-nav ul li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+/* Estilos inicio */
+.header-content{
+    background-color: #32609E;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text-header{
+    color: #ffffff;
+    margin-left: 111px;
+}
+
+.text-header h1{
+    font-family:"Jost", sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-header p{
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 300 ;
+}
+
+.btn-read-more{
+    background-color: #ffffff;
+    color: #32609E;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 24px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-read-more:hover{
+    transform: scale(1.1); /* Efecto de zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Brillo sutil */
+}
+
+.imagen1{
+    margin-right: 111px;
+    width: 621px;
+
+}
+
+/* Estilos productos */
+.product{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product h2{
+    font-family:"Jost", sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    color: #32609E;
+}
+
+.product .conteiner {
+    display: grid; /* Utiliza Grid para la disposición */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-items: center; /* Centra los elementos horizontalmente */
+    align-items: start;
+}
+
+.product .btn-materias, 
+.product .btn-conservantes, 
+.product .btn-sobrecopas, 
+.product .btn-asesorias {
+    display: flex; /* Alinea la imagen y el enlace en fila */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 20px;
+    width: 540px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product svg {
+    width: 118px;
+    height: 118px;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
+    background-color: #4590F1;
+    border-radius: 50%; /* Hace que el svg tenga forma circular */
+    padding: 15px; /* Opcional: agrega espacio dentro del círculo */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del círculo */
+}
+
+.product svg:hover{
+    transform: scale(1.1);
+    background-color: #32609E;
+}
+
+.text-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-product a {
+    font-weight: bold;
+    font-size: 24px;
+    color: #32609E; /* Color del enlace */
+    text-decoration: none;
+    white-space: nowrap; /* Mantener el texto en una sola línea */
+    overflow: hidden; /* Ocultar el texto que se desborda */
+    text-overflow: ellipsis; /* Añadir "..." al final del texto si se desborda */
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.text-product span {
+    font-size: 14px;
+    color: rgb(20, 20, 20);
+    white-space: nowrap; /* Mantener el texto en una sola línea */
+    overflow: hidden; /* Ocultar el texto que se desborda */
+    text-overflow: ellipsis; /* Añadir "..." al final del texto si se desborda */
+    text-align: left;
+}
+
+/* Estilos pie de pagina */
+
+footer {
+    background-color: #32609E;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.prolacol-info, .location, .redes {
+    flex: 1;
+    margin: 20px;
+}
+
+.prolacol-info h3, .location h3, .redes h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.prolacol-info p, .location span {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.phone, .email, .web {
+    margin: 10px 0;
+}
+
+.phone a, .email a, .web a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.phone a:hover, .email a:hover, .web a:hover {
+    color: #ffcc00;
+}
+
+.phone svg, .email svg, .web svg, .location svg {
+    vertical-align: middle;
+}
+
+.location {
+    text-align: left;
+}
+
+.container-map iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Estilo general del botón de WhatsApp */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed; /* Mantiene el botón en la pantalla */
+    bottom: 20px; /* Distancia desde el borde inferior */
+    right: 20px; /* Distancia desde el borde derecho */
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Color verde oscuro de WhatsApp */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-button svg {
+    fill: #ffffff; /* Color del icono de WhatsApp */
+    width: 36px; /* Aumentado el tamaño del SVG */
+    height: 36px; /* Aumentado el tamaño del SVG */
+}
+
+/* Estilo del tooltip */
+.tooltip-text {
+    visibility: hidden;
+    width: 160px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 50%; /* Ajusta la posición vertical del tooltip */
+    right: 100%; /* Posiciona el tooltip a la izquierda del botón */
+    margin-right: 10px; /* Espacio entre el tooltip y el botón */
+    transform: translateY(50%); /* Alinea verticalmente el tooltip con el botón */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+}
+
+.whatsapp-button:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el menú en dispositivos móviles */
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 12px 20px; /* Ajustar el padding para pantallas pequeñas */
+    }
+
+    .menu-container label img.menu-responsib {
+        display: block; /* Muestra el ícono del menú en pantallas pequeñas */
+    }
+
+    .contenido-nav {
+        position: absolute;
+        top: 87px; /* Ajusta según la altura del contenedor del menú */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .contenido-nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .contenido-nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contenido-nav ul li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    input[type="checkbox"]:checked ~ .contenido-nav {
+        display: flex;
+    }
+}
+
+/* Media Queries para pantallas pequeñas  parte1 */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+        text-align: center;
+    }
+
+    .text-header{
+        margin-left: 0%;
+    }
+
+    .text-header h1 {
+        font-size: 36px; /* Tamaño de fuente reducido para pantallas pequeñas */
+        margin-top: 11px;
+    }
+
+    .text-header p {
+        font-size: 18px; /* Tamaño de fuente reducido para pantallas pequeñas */
+        margin-left: auto;
+    }
+
+    .btn-read-more {
+        font-size: 20px; /* Ajuste de tamaño del botón para pantallas pequeñas */
+        padding: 10px 20px; /* Reduce el padding del botón */
+    }
+
+    .imagen1 {
+        width: 90%; /* Ajusta el tamaño para adaptarse mejor */
+        margin-right: 0%;
+    }
+}
+
+/* Media Queries para pantallas pequeñas  parte2 */
+@media (max-width: 768px) {
+    .product {
+        padding: 20px 10px;
+    }
+
+    .product h2 {
+        font-size: 48px;
+    }
+
+    .product .conteiner {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        gap: 15px;
+    }
+
+    .product .btn-materias, 
+    .product .btn-conservantes, 
+    .product .btn-sobrecopas, 
+    .product .btn-asesorias {
+        width: 100%; /* Asegura que el ancho sea el 100% del contenedor */
+        padding: 15px;
+    }
+
+    .product svg {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+
+    .text-product a {
+        font-size: 20px;
+    }
+
+    .text-product span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product h2 {
+        font-size: 36px;
+    }
+
+    .product .btn-materias, 
+    .product .btn-conservantes, 
+    .product .btn-sobrecopas, 
+    .product .btn-asesorias {
+        padding: 10px;
+    }
+
+    .product svg {
+        width: 60px;
+        height: 60px;
+        margin-right: 8px;
+        padding: 8px;
+    }
+
+    .text-product a {
+        font-size: 14px;
+    }
+
+    .text-product span {
+        font-size: 10px;
+    }
+}

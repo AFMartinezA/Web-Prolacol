@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+}
+
+.menu-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 12px 111px;
+}
+
+/* Estilo del logo */
+.menu-container .logo img {
+    height: 59px;
+    border-radius: 10px;
+}
+
+/* Checkbox para el menú responsive */
+.menu-container input[type="checkbox"] {
+    display: none;
+}
+
+/* Icono del menú responsive */
+.menu-container label img.menu-responsib {
+    height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilos del menú */
+.contenido-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+.contenido-nav ul li {
+    position: relative;
+}
+
+.contenido-nav ul li a {
+    text-decoration: none;
+    color: #32609E;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contenido-nav a.active{
+    font-weight: bold; /* Mantiene el texto en negrita */
+    color: #32609E; /* Cambia el color del texto a rojo para resaltar */
+    text-decoration: underline; /* Añade un subrayado al enlace activo */
+    text-decoration-thickness: 3px; /* Grosor del subrayado */
+}
+
+.contenido-nav ul li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+
+/* Estilos para el menú en dispositivos móviles */
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 12px 20px; /* Ajustar el padding para pantallas pequeñas */
+    }
+
+    .menu-container label img.menu-responsib {
+        display: block; /* Muestra el ícono del menú en pantallas pequeñas */
+    }
+
+    .contenido-nav {
+        position: absolute;
+        top: 87px; /* Ajusta según la altura del contenedor del menú */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .contenido-nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .contenido-nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contenido-nav ul li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    input[type="checkbox"]:checked ~ .contenido-nav {
+        display: flex;
+    }
+}
