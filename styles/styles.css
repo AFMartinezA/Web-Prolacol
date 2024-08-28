@@ -477,3 +477,41 @@ footer {
         font-size: 10px;
     }
 }
+
+@media (max-width: 768px) {
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .prolacol-info, .location, .redes {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .prolacol-info h3, .location h3, .redes h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .prolacol-info p, .location span {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .phone, .email, .web {
+        margin: 5px 0;
+    }
+
+    .phone a, .email a, .web a {
+        font-size: 14px;
+    }
+
+    .container-map iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 250px;
+    }
+}
