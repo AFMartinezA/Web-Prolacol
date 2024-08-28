@@ -73,6 +73,126 @@ body{
 }
 
 
+
+
+
+
+/* Estilos pie de pagina */
+
+footer {
+    background-color: #32609E;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.prolacol-info, .location, .redes {
+    flex: 1;
+    margin: 20px;
+}
+
+.prolacol-info h3, .location h3, .redes h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.prolacol-info p, .location span {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.phone, .email, .web {
+    margin: 10px 0;
+}
+
+.phone a, .email a, .web a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.phone a:hover, .email a:hover, .web a:hover {
+    color: #ffcc00;
+}
+
+.phone svg, .email svg, .web svg, .location svg {
+    vertical-align: middle;
+}
+
+.location {
+    text-align: left;
+}
+
+.container-map iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Estilo general del botón de WhatsApp */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed; /* Mantiene el botón en la pantalla */
+    bottom: 20px; /* Distancia desde el borde inferior */
+    right: 20px; /* Distancia desde el borde derecho */
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Color verde oscuro de WhatsApp */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-button svg {
+    fill: #ffffff; /* Color del icono de WhatsApp */
+    width: 36px; /* Aumentado el tamaño del SVG */
+    height: 36px; /* Aumentado el tamaño del SVG */
+}
+
+/* Estilo del tooltip */
+.tooltip-text {
+    visibility: hidden;
+    width: 160px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 50%; /* Ajusta la posición vertical del tooltip */
+    right: 100%; /* Posiciona el tooltip a la izquierda del botón */
+    margin-right: 10px; /* Espacio entre el tooltip y el botón */
+    transform: translateY(50%); /* Alinea verticalmente el tooltip con el botón */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+}
+
+.whatsapp-button:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* Estilos para el menú en dispositivos móviles */
 @media (max-width: 768px) {
     .menu-container {
@@ -115,5 +235,43 @@ body{
     /* Mostrar el menú cuando el checkbox está marcado */
     input[type="checkbox"]:checked ~ .contenido-nav {
         display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .prolacol-info, .location, .redes {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .prolacol-info h3, .location h3, .redes h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .prolacol-info p, .location span {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .phone, .email, .web {
+        margin: 5px 0;
+    }
+
+    .phone a, .email a, .web a {
+        font-size: 14px;
+    }
+
+    .container-map iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 250px;
     }
 }
