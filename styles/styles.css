@@ -73,32 +73,34 @@ body{
 }
 
 /* Estilos inicio */
-.header-content{
+.header-content {
     background-color: #32609E;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
-.text-header{
+.text-header {
     color: #ffffff;
     margin-left: 111px;
 }
 
-.text-header h1{
-    font-family:"Jost", sans-serif;
+.text-header h1 {
+    font-family: "Jost", sans-serif;
     font-size: 64px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.text-header p{
+.text-header p {
     font-family: "Inter", sans-serif;
     font-size: 24px;
-    font-weight: 300 ;
+    font-weight: 300;
 }
 
-.btn-read-more{
+.btn-read-more {
     background-color: #ffffff;
     color: #32609E;
     border: none;
@@ -113,16 +115,46 @@ body{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-read-more:hover{
+.btn-read-more:hover {
     transform: scale(1.1); /* Efecto de zoom */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Brillo sutil */
 }
 
-.imagen1{
-    margin-right: 111px;
-    width: 621px;
+/* Estilos para el carrusel Swiffy Slider */
+.swiffy-slider {
+    position: relative;
+    max-width: 621px; /* Ajusta el ancho máximo del carrusel */
+    max-height: 450px;
+    margin-right: 20px; /* Espacio a la derecha igual que la imagen original */
+    border-radius: 15px; /* Borde redondeado si lo deseas */
+    overflow: hidden; /* Asegura que las imágenes no se desborden */
 
 }
+
+/* Estilo de los elementos de la lista (imágenes) */
+.slider-container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.slider-container li {
+    flex: 1;
+    /* Agrega un contenedor para manejar el tamaño de las imágenes */
+    max-width: 100%; /* Asegura que las imágenes no se desborden del contenedor */
+    height: auto;
+}
+
+/* Estilo de las imágenes dentro del carrusel */
+.slider-container img {
+    width: 100%; /* Ajusta el ancho de las imágenes al contenedor */
+    height: auto; /* Mantiene la relación de aspecto de las imágenes */
+    object-fit: cover; /* Asegura que las imágenes se ajusten bien dentro del contenedor */
+}
+
+
+
 
 /* Estilos productos */
 .product{
@@ -384,6 +416,8 @@ footer {
         flex-direction: column; /* Cambia a columna para pantallas pequeñas */
         align-items: center; /* Centra los elementos */
         text-align: center;
+        padding-bottom: 100px;
+        padding-top: 100px;
     }
 
     .text-header{
@@ -408,6 +442,41 @@ footer {
     .imagen1 {
         width: 90%; /* Ajusta el tamaño para adaptarse mejor */
         margin-right: 0%;
+    }
+}
+
+/*carousel para pantallas pequeñas*/
+
+@media (max-width: 768px) {
+    .swiffy-slider {
+        max-width: 100%; /* Ajusta el ancho máximo del carrusel a 100% en dispositivos móviles */
+        max-height: 300px; /* Ajusta la altura máxima del carrusel en dispositivos móviles */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-top: 30px;
+    }
+    
+    /* Ajusta el tamaño del carrusel y el espaciado en dispositivos móviles */
+    .header-content {
+        flex-direction: column; /* Cambia la dirección del flex para adaptarse a pantallas más pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+    
+    .text-header {
+        margin-left: 0; /* Elimina el margen izquierdo para dispositivos móviles */
+        text-align: center; /* Centra el texto */
+    }
+    
+    .text-header h1 {
+        font-size: 48px; /* Reduce el tamaño del texto en dispositivos móviles */
+    }
+    
+    .text-header p {
+        font-size: 18px; /* Reduce el tamaño del texto en dispositivos móviles */
+    }
+    
+    .btn-read-more {
+        font-size: 20px; /* Ajusta el tamaño del botón en dispositivos móviles */
+        padding: 10px 20px; /* Ajusta el padding del botón en dispositivos móviles */
     }
 }
 
