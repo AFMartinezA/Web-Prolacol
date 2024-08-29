@@ -72,6 +72,35 @@ body{
     text-decoration-thickness: 3px;
 }
 
+/* Estilos contenido quienes somos */
+
+.header-content-n {
+    background-color: white;
+}
+
+.header-content-n h1 {
+    font-family: "Jost", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #32609E;
+    padding: 50px 20px;
+}
+
+.text-nosotros {
+    font-family: "Inter", sans-serif;
+    color: #32609E;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.text-nosotros p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
 
 
