@@ -73,7 +73,88 @@ body{
 }
 
 
+/* Formulario pqrs */
 
+form {
+    font-family: 'Inter', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 48px;
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #32609E;
+    padding: 50px 20px;
+    width: 100%;
+    margin: 0;
+}
+/* Estilo para las etiquetas */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #32609E;
+    font-family: 'Jost', sans-serif;
+}
+
+
+/* Estilo para los campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+#tipo{
+    margin-bottom: 10px;
+}
+/* Efecto hover para los campos de entrada */
+form input[type="text"]:hover,
+form input[type="email"]:hover,
+form textarea:hover {
+    border-color: #32609E;
+}
+
+/* Estilo para el área de texto */
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Estilo para el botón de envío */
+form button[type="submit"] {
+    background-color: #32609E;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para el botón de envío */
+form button[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 
 
